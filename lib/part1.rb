@@ -25,11 +25,17 @@
 #instructions specified in the assignment description to hand-in your work.
 
 def palindrome?(str)
-  # YOUR CODE HERE
+  str = str.downcase.gsub(/[^a-z]/, '')
+  for i in 0...str.length/2
+    if str[i].downcase != str[str.length - i - 1].downcase
+      return false
+    end
+  end
+  return true
 end
 
 def count_words(str)
-  # YOUR CODE HERE
+  return { :word_count => str.split.length }
 end
 
 
