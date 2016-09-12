@@ -35,5 +35,10 @@ def palindrome?(str)
 end
 
 def count_words(str)
-  return { :word_count => str.split.length }
+  string = str.downcase.split
+  hash = Hash.new(0)
+  string.each { |word|
+    hash[word] += 1
+  }
+  return hash
 end
