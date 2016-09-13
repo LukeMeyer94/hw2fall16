@@ -45,7 +45,8 @@ def compareMoves(playerOne, playerTwo)
 end
 
 def rps_tournament_winner(tournament)
-  # YOUR CODE HERE
+  if tournament[0][0].instance_of? String
+    return rps_game_winner(tournament)
+  end
+  return rps_game_winner([rps_tournament_winner(tournament[0]),rps_tournament_winner(tournament[1])])
 end
-
-#feel free to add your own helper functions as needed
