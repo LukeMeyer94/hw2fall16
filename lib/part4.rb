@@ -1,4 +1,10 @@
 class Class
+  
+  attr_accessor :bar
+  attr_accessor :foo
+  
+  def initialize
+  end
 
   def attr_accessor_with_history(attr_name)
     attr_name = attr_name.to_s   # make sure it's a string
